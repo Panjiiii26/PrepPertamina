@@ -1,0 +1,253 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #eef2f7;
+  color: #222;
+}
+
+.quiz-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 25px;
+  padding: 40px;
+  background: #eef2f7;
+}
+
+.card {
+  width: 700px;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 35px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+  animation: fadeIn 0.4s ease;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.18);
+}
+
+.card h2 {
+  color: #005bac;
+  margin-bottom: 20px;
+}
+
+.card h3 {
+  color: #222;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.card p {
+  color: #333;
+  line-height: 1.6;
+  margin-top: 10px;
+}
+
+.progress {
+  width: 100%;
+  height: 12px;
+  background: #ddd;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 25px;
+}
+
+.progress-bar{
+  height:100%;
+  background:linear-gradient(90deg,#005BAC,#00AEEF,#E30613);
+  border-radius:10px;
+  transition:width .5s ease;
+}
+
+.option {
+  width: 100%;
+  padding: 16px;
+  margin-top: 12px;
+  border: 2px solid #ddd;
+  border-radius: 12px;
+  background: #f8f9fa;
+  color: #222;
+  cursor: pointer;
+  text-align: left;
+  font-size: 16px;
+  transition: all 0.25s ease;
+}
+
+/* Hover hanya sebelum jawaban dipilih */
+.option:not(.correct):not(.wrong):hover {
+  background: #dcecff;
+  border-color: #005bac;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.option.selected {
+  background: #005bac;
+  color: white;
+  border-color: #005bac;
+}
+
+/* Jawaban benar */
+.option.correct {
+  background: #22c55e;
+  color: white;
+  border-color: #22c55e;
+  cursor: default;
+}
+
+/* Jawaban salah */
+.option.wrong {
+  background: #ef4444;
+  color: white;
+  border-color: #ef4444;
+  cursor: default;
+}
+
+/* Tidak ada efek hover setelah jawaban dipilih */
+.option.correct:hover,
+.option.wrong:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+.next-btn,
+.menu-btn {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 12px;
+  background: #005bac;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.next-btn:hover,
+.menu-btn:hover {
+  background: #004782;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+}
+
+.next-btn:disabled,
+.menu-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.result {
+  text-align: center;
+}
+
+.result h1 {
+  color: #005bac;
+  margin-bottom: 15px;
+}
+
+.result h2 {
+  margin-bottom: 20px;
+}
+
+hr {
+  margin: 25px 0;
+  border: none;
+  border-top: 1px solid #ddd;
+}
+
+.sidebar {
+  width: 230px;
+  background: white;
+  border-radius: 18px;
+  padding: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+  position: sticky;
+  top: 20px;
+}
+
+.sidebar h3 {
+  margin-top: 0;
+  text-align: center;
+  color: #005bac;
+}
+
+.sidebar p {
+  text-align: center;
+  color: #666;
+  margin-top: -5px;
+  margin-bottom: 20px;
+}
+
+.number-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.nomor {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  background: #ddd;
+  font-weight: bold;
+}
+
+.nomor:hover{
+    background:#005BAC;
+    color:white;
+    transform:scale(1.08);
+    transition:.2s;
+}
+
+.nomor.aktif {
+  background: #005bac;
+  color: white;
+}
+
+.nomor.selesai {
+  background: #00a859;
+  color: white;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 800px) {
+  .quiz-container {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 20px;
+  }
+
+  .sidebar,
+  .card {
+    width: 100%;
+  }
+
+  .sidebar {
+    position: static;
+  }
+}

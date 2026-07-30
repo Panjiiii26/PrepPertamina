@@ -1,0 +1,50 @@
+.sidebar{
+    width:250px;
+    background:white;
+    padding:20px;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,.1);
+}
+
+.sidebar h3{
+    text-align:center;
+    color:#005BAC;
+}
+
+.sidebar p{
+    text-align:center;
+    color:#666;
+    margin-top:-5px;
+    margin-bottom:20px;
+}
+
+.number-grid{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:10px;
+}
+
+.nomor{
+    width:45px;
+    height:45px;
+    border:none;
+    border-radius:10px;
+    background:#ddd;
+    cursor:pointer;
+    font-weight:bold;
+    transition:.2s;
+}
+
+.nomor:hover{
+    transform:scale(1.08);
+}
+
+.nomor.aktif{
+    background:#005BAC;
+    color:white;
+}
+
+.nomor.selesai{
+    background:#22c55e;
+    color:white;
+}
