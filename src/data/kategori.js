@@ -37,7 +37,7 @@ const kategori = [
   {
     id: "Manajemen Proyek",
     nama: "📊 Manajemen Proyek",
-    siap: false,
+    siap: true
   },
   {
     id: "Bahasa Inggris",

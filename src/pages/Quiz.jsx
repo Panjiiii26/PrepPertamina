@@ -8,6 +8,7 @@ import pertamina from "../data/kategori/pertamina";
 import twk from "../data/kategori/twk";
 import tiu from "../data/kategori/tiu";
 import tkb from "../data/kategori/tkb";
+import manajemen from "../data/kategori/manajemen";
 
 import "./Quiz.css";
 import Header from "../components/Header";
@@ -42,6 +43,10 @@ function Quiz() {
 
   case "Wawasan Umum":
     return twk;
+
+  case "Manajemen Proyek":
+  return manajemen;
+
 
   default:
     return [];
