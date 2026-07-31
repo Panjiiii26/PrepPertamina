@@ -16,29 +16,36 @@ import Timer from "../components/Timer";
 
 function Quiz() {
   const location = useLocation();
-  const kategori = location.state?.kategori || "TWK";
+  const kategori = location.state?.kategori || "Verbal";
 
   console.log("Kategori =", kategori);
 
   const soal = useMemo(() => {
-    switch (kategori) {
-      case "TWK":
-        return twk;
-      case "TIU":
-        return tiu;
-      case "HSSE":
-        return hsse;
-      case "Pertamina":
-        return pertamina;
-      case "Verbal":
-        return verbal;
-      case "Logika":
-        return logika;
-      case "TKB":
-        return tkb;
-      default:
-        return twk;
-    }
+   switch (kategori) {
+  case "Verbal":
+    return verbal;
+
+  case "Numerik":
+    return tiu;
+
+  case "Logika":
+    return logika;
+
+  case "Energi & Migas":
+    return pertamina;
+
+  case "HSSE":
+    return hsse;
+
+  case "Teknik Dasar":
+    return tkb;
+
+  case "Wawasan Umum":
+    return twk;
+
+  default:
+    return [];
+}
   }, [kategori]);
 
   const [nomor, setNomor] = useState(0);

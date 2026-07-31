@@ -5,11 +5,14 @@ function Category({ aktif, setAktif }) {
     <div className="category">
       {kategori.map((item) => (
         <button
-          key={item}
-          onClick={() => setAktif(item)}
-          className={aktif === item ? "active-category" : ""}
+          key={item.id}
+          type="button"
+          disabled={!item.siap}
+          onClick={() => setAktif(item.id)}
+          className={aktif === item.id ? "active-category" : ""}
         >
-          {item}
+          {item.nama}
+          {!item.siap && " — Segera hadir"}
         </button>
       ))}
     </div>
