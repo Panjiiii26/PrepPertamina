@@ -4,7 +4,7 @@ import "./Home.css";
 import Category from "../components/Category";
 
 function Home() {
- const [aktif, setAktif] = useState("TWK");
+ const [aktif, setAktif] = useState("Verbal");
   return (
     <div className="home">
 

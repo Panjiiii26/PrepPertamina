@@ -1,10 +1,14 @@
 const kategori = [
-  "TWK",
-  "TIU",
-  "TKP",
+  "Verbal",
+  "Numerik",
+  "Logika",
+  "Energi & Migas",
   "HSSE",
-  "BUMN",
-  "Pertamina",
+  "Teknik Dasar",
+  "Manajemen Proyek",
+  "Wawasan Umum",
+  "Bahasa Inggris",
+  "SJT",
 ];
 
 export default kategori;
