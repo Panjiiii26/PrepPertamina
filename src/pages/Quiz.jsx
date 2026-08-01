@@ -9,7 +9,6 @@ import twk from "../data/kategori/twk";
 import tiu from "../data/kategori/tiu";
 import tkb from "../data/kategori/tkb";
 import manajemen from "../data/kategori/manajemen";
-import wawasanUmum from "../data/kategori/wawasanUmum";
 import english from "../data/kategori/english";
 import sjt from "../data/kategori/sjt";
 
@@ -43,9 +42,6 @@ function Quiz() {
 
   case "Teknik Dasar":
     return tkb;
-
-  case "Wawasan Umum":
-    return twk;
 
   case "Manajemen Proyek":
   return manajemen;
