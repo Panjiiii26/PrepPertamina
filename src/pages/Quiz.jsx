@@ -9,6 +9,7 @@ import twk from "../data/kategori/twk";
 import tiu from "../data/kategori/tiu";
 import tkb from "../data/kategori/tkb";
 import manajemen from "../data/kategori/manajemen";
+import wawasanUmum from "../data/kategori/wawasanUmum";
 
 import "./Quiz.css";
 import Header from "../components/Header";
@@ -46,6 +47,9 @@ function Quiz() {
 
   case "Manajemen Proyek":
   return manajemen;
+
+  case "Wawasan Umum":
+  return wawasanUmum;
 
 
   default:
