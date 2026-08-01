@@ -47,7 +47,7 @@ function Quiz() {
   return manajemen;
 
   case "Wawasan Umum":
-  return wawasanUmum;
+  return twk;
 
   case "Bahasa Inggris":
   return english;
