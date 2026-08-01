@@ -11,6 +11,7 @@ import tkb from "../data/kategori/tkb";
 import manajemen from "../data/kategori/manajemen";
 import english from "../data/kategori/english";
 import sjt from "../data/kategori/sjt";
+import wawasanUmum from "../data/kategori/wawasanUmum";
 
 import "./Quiz.css";
 import Header from "../components/Header";
@@ -47,8 +48,8 @@ function Quiz() {
   return manajemen;
 
   case "Wawasan Umum":
-  return twk;
-
+  return wawasanUmum;
+  
   case "Bahasa Inggris":
   return english;
 
