@@ -10,6 +10,7 @@ import tiu from "../data/kategori/tiu";
 import tkb from "../data/kategori/tkb";
 import manajemen from "../data/kategori/manajemen";
 import wawasanUmum from "../data/kategori/wawasanUmum";
+import english from "../data/kategori/english";
 
 import "./Quiz.css";
 import Header from "../components/Header";
@@ -50,6 +51,9 @@ function Quiz() {
 
   case "Wawasan Umum":
   return wawasanUmum;
+
+  case "Bahasa Inggris":
+  return english;
 
 
   default:

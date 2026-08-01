@@ -42,7 +42,7 @@ const kategori = [
   {
     id: "Bahasa Inggris",
     nama: "🇬🇧 Bahasa Inggris",
-    siap: false,
+    siap: true
   },
   {
     id: "SJT",
