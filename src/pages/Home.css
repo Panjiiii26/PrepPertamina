@@ -136,3 +136,44 @@ body{
     color:#005BAC;
     font-size:40px;
 }
+
+@media (max-width: 480px) {
+  .home {
+    align-items: flex-start;
+    padding: 16px;
+  }
+
+  .home-card {
+    width: 100%;
+    padding: 24px 18px;
+    border-radius: 18px;
+  }
+
+  .home-card:hover {
+    transform: none;
+  }
+
+  .home-card h1 {
+    font-size: 28px;
+  }
+
+  .home-card p {
+    font-size: 15px;
+  }
+
+  .category {
+    gap: 8px;
+    margin: 20px 0;
+  }
+
+  .category button {
+    padding: 9px 12px;
+    font-size: 13px;
+  }
+
+  .menu-btn {
+    padding: 15px;
+    margin-top: 12px;
+    font-size: 16px;
+  }
+}

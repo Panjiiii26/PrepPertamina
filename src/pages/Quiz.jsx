@@ -226,10 +226,12 @@ function Quiz() {
               <p>{data.pembahasan}</p>
 
               <div
+                className="quiz-actions"
                 style={{
                   display: "flex",
                   gap: "10px",
                   marginTop: "20px",
+                  flexWrap: "wrap",
                 }}
               >
                 <button
