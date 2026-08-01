@@ -47,7 +47,7 @@ const kategori = [
   {
     id: "SJT",
     nama: "🤝 SJT",
-    siap: false,
+    siap: true,
   },
 ];
 
